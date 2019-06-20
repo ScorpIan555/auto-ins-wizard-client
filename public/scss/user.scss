@@ -1,0 +1,41 @@
+// 
+// 
+// user.scss
+//
+// Place your own custom CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+%hero-shared{
+    height: 100%;
+    background-color: whitesmoke;
+      /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.heroWelcome {
+    @extend %hero-shared;
+    background-image: url('/assets/img/samson-creative-91091-unsplash.jpg');
+}
+
+.heroForm {
+  @extend %hero-shared;
+  background-image: url('/assets/img/benjamin-shanks-333252-unsplash.JPG')
+}
+
+.Aligner {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+}
+
+#general {
+  background-color: whitesmoke;
+}
+
+.customFormHeader {
+  
+    margin-bottom: 1.5rem;
+    // color: red;
+  
+}
