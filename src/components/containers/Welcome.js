@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { LoaderButton } from '../presentation';
 import { LinkContainer } from 'react-router-bootstrap';
 import actions from '../../actions';
+import style from '../../../public/scss/theme.scss'
 
 class Welcome extends Component {
     state = {
@@ -30,17 +31,15 @@ class Welcome extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    console.log('handleSubmit.this.state.zipCode:::', this.state.zipCode);
 
     this.setState({ isLoading: true });
 
     try {
-      console.log('handleSubmit.this.state.zipCode:::', this.state.zipCode);
       await this.props.submitUserInput(this.state.zipCode);
-      
     }
     catch (err) {
       console.log('err:::', err);
+      alert(err)
     }
     
     this.setState({ isLoading: false });
@@ -49,32 +48,45 @@ class Welcome extends Component {
   }
 
   render() {
+    // destructure and assign component's class methods
+    let { handleChange, handleSubmit, validateForm } = this;
+    // destructure and assign properties from state object
+    let { zipCode, isLoading } = this.state;
+
     return (
       <section className="space-lg">
         <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-lg-6">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-8">
               <div className="card">
                 <div className="card-body">
                   <form>
-                    <div className="form-group">
-                      <label htmlFor="exampleInputUsername">Zip Code</label>
-                      <input
-                        type="text"
-                        value={this.state.zipCode}
-                        onChange={this.handleChange}
-                        className="form-control form-control-lg col-5"
-                        id="zipCode"
-                        placeholder="Enter your zip..."
-                      />
+                    <div className="form-group form-row  align-items-center justify-content-center" style={{"height": "150px"}}>
+                      {/* <div className="col-3">
+                        <label id="zipCodeLabel" className={style.zipCodeLabel} htmlFor="exampleInputUsername">Zip Code</label>
+                      </div> */}
+                      <div className="col-1 ">
+                        <i className="material-icons mr-1">public</i>
+                      </div>
+                      <div className="col-8">
+                        <input
+                          type="text"
+                          value={zipCode}
+                          onChange={handleChange}
+                          className={'form-control form-control-lg col-9 rounded ' + style.welcomeInputBox}
+                          id="zipCode"
+                          placeholder="ZIP CODE"
+                        />
+                      </div>
+                      
                     </div>
-                    <LinkContainer to="/get-quote-form" onClick={this.handleSubmit}>
+                    <LinkContainer to="/get-quote-form" onClick={handleSubmit}>
                       <LoaderButton
                         block
                         className="btn-lg btn-success"
-                        disabled={!this.validateForm()}
+                        disabled={!validateForm()}
                         type="submit"
-                        isLoading={this.state.isLoading}
+                        isLoading={isLoading}
                         text="Get Your Quote!"
                         loadingText="Let's Go!"
                       />
