@@ -125,7 +125,7 @@ class WizardContainer extends Component {
             <div className="tab-pane fade show active" id="general" role="tabpanel">
               <div className="container">
                 
-                <div className="row mb-4">
+                <div className="row">
 
                   <StatusBar historyLocation={historyLocation} />
 

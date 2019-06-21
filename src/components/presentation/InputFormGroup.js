@@ -5,14 +5,11 @@ export default props => {
 
   return (
     <div className="form-group">
-      <label htmlFor={props.id}>
-        {props.labelText}
-        <span className="text-red">*</span>
-      </label>
       <input
         className="form-control form-control-borderless form-control-lg"
         type={props.type}
         name={props.name}
+        placeholder={props.labelText}
         id={props.id}
         required
         value={props.value}

@@ -30,7 +30,7 @@ export default childProps => {
           </div>
           <div className="col-6">
             <InputFormGroup
-              labelText="First Name: "
+              labelText="First Name"
               type="text"
               name="firstName"
               id="firstName"
@@ -41,7 +41,7 @@ export default childProps => {
 
           <div className="col-6">
             <InputFormGroup
-              labelText="Last Name: "
+              labelText="Last Name"
               type="text"
               name="lastName"
               id="lastName"
@@ -52,7 +52,7 @@ export default childProps => {
 
           <div className="col-6">
             <InputFormGroup
-              labelText="Birthday: "
+              labelText="Birthday"
               type="date"
               name="birthday"
               id="birthday"
@@ -67,7 +67,7 @@ export default childProps => {
 
           <div className="col-12">
             <InputFormGroup
-              labelText="Street Address: "
+              labelText="Street Address"
               type="text"
               name="addressOne"
               id="addressOne"
@@ -78,7 +78,7 @@ export default childProps => {
 
           <div className="col-7">
             <InputFormGroup
-              labelText="City: "
+              labelText="City "
               type="text"
               name="city"
               id="city"
@@ -89,7 +89,7 @@ export default childProps => {
 
           <div className="col-2">
             <InputFormGroup
-              labelText="State: "
+              labelText="State "
               type="text"
               name="stateOrCommonwealth"
               id="stateOrCommonwealth"
@@ -100,7 +100,7 @@ export default childProps => {
 
           <div className="col-3">
             <InputFormGroup
-              labelText="Zipcode: "
+              labelText="Zipcode "
               type="number"
               name="zipCode"
               id="zipCode"
