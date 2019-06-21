@@ -40,13 +40,16 @@
   
 }
 
-.zipCodeLabel {
-  text-size-adjust: none; 
-  color: red;
-  font-size:2.5rem;
+// .zipCodeLabel {
+//   text-size-adjust: none; 
+//   color: red;
+//   font-size:2.5rem;
 
-}
+// }
 
 .welcomeInputBox {
   height: 5rem;
+  border: none;
+  text-align-last: right;
+  font-size: 4rem;
 }

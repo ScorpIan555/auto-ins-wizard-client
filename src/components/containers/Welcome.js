@@ -73,7 +73,7 @@ class Welcome extends Component {
                           type="text"
                           value={zipCode}
                           onChange={handleChange}
-                          className={'form-control form-control-lg col-9 rounded ' + style.welcomeInputBox}
+                          className={'form-control align-items-right form-control-lg col-12 rounded ' + style.welcomeInputBox}
                           id="zipCode"
                           placeholder="ZIP CODE"
                         />
